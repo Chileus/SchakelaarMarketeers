@@ -1,0 +1,258 @@
+html{
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.top-header ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.top-header {
+  width:100;
+  padding: 1rem;
+  font-size: .75rem;
+  background: #00a0c5;
+}
+
+.header{
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  border-bottom: 2px solid #fff;
+}
+.header::before{
+  content:"";
+  width: 100%;
+  border-bottom: 4px solid #373532;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.top-header ul li{
+  font-weight: 700;
+  color: #fff
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.low-header img{
+  width: 200px;
+}
+.low-header{
+  display: flex;
+  align-items: flex-end
+  padding: 20px;
+}
+
+.menu a{
+  line-height: 80px;
+  height: 80px;
+
+}
+.branding a{
+  display: flex;
+  height: 50%;
+  align-content: flex-end;
+}
+.branding{
+  display: flex;
+  align-content: flex-end;
+}
+
+
+.menu{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.menu ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+
+}
+.menu ul li{
+  padding-left: 2rem;
+  height: auto;
+}
+.background-image{
+  background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2021/06/header-home-02.jpg);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 50vh;
+}
+
+.background-image h1{
+  text-align: center;
+  color: #fff;
+  margin-bottom:75px;
+
+}
+h1{
+  font-family: 'Merriweather', sans-serif;
+  font-size: 4.209em;
+  display: flex;
+  align-items: flex-end;
+
+}
+.title{
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.block-group{
+  margin-bottom: 75px;
+  margin-top: 25px;
+}
+a{
+  text-decoration: none;
+}
+.background-image-full{
+  background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2021/07/putting-green-03.jpg);
+  min-height: 200px;
+  background-position: 10% 54%;
+  width:100%;
+}
+.orange-button{
+  background-color: #ff8b00;
+  padding: 15px 30px 15px 30px;
+  border-radius: 9999px;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.3333rem;
+  text-align: center;
+  transition: opacity, .3s;
+}
+.orange-button:hover{
+  background-color: #e07a00;
+}
+.block-buttons{
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.block-button{
+  margin-right: 0px;
+}
+.baanstatus{
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+  position: relative;
+
+}
+.state{
+  padding: 30px;
+  border: 1px solid #e6e6e6;;
+  border-left-color: transparent;
+  flex-grow: 1;
+}
+.state span{
+  font-size: 16px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+h4{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.77rem;
+  margin: 0px;
+}
+
+*{
+  box-sizing: inherit;
+}
+.block-columns{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.block-column{
+  flex-grow: 1;
+  min-width: 0;
+  margin: 25px;
+
+}
+
+.column1{
+  background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2020/12/rechthoek_8870.jpg);
+  background-position: 50% 50%;
+  min-height: 250px;
+  width: 100%;
+  background-size: cover;
+}
+.text-content p{
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+
+}
+.text-content{
+  background-color: white;
+  margin: 0px 30px;
+  padding: 15px;
+  bottom: -30px;
+  text-align: center;
+
+}
+.text-content a{
+  display: block;
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 15px;
+  margin: 15px -15px -15px -15px;
+  font-size: 1.333em;
+}
+.green{
+  background-color: #92ad00;
+}
+.inner-ornament{
+  content: "";
+  width: 0;
+  height: 0;
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  border-left: 50vw solid #fff;
+  border-right: 50vw solid #fff;
+  height: 70px;
+}
+.ornament{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
