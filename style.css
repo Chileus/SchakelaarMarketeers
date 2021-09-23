@@ -35,22 +35,33 @@ html{
   bottom: 0;
   z-index: 1;
 }
+.header::after{
+  border-bottom: 4px solid #00a0c5;
+  bottom: -6px;
+  z-index: 1000;
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+}
 
 .top-header ul li{
   font-weight: 700;
-  color: #fff
+  color: #fff;
+
 }
 body{
   margin: 0;
   padding: 0;
 }
 .low-header img{
-  width: 200px;
+  max-width: 300px;
+  margin-bottom: 4px;
 }
 .low-header{
   display: flex;
-  align-items: flex-end
-  padding: 20px;
+  align-items: flex-end;
+  font-size: 24px;
 }
 
 .menu a{
@@ -74,7 +85,6 @@ body{
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  padding: 15px;
 }
 
 .menu ul{
@@ -84,8 +94,18 @@ body{
 
 }
 .menu ul li{
-  padding-left: 2rem;
   height: auto;
+  padding: 0px 30px 0px 30px;
+  transition: opacity, .3s;
+}
+.menu ul li:hover{
+  background: rgba(255, 255, 255, 0);
+  color: #00a0c5;
+  font-weight: normal;
+  text-decoration: none;
+  border-color: #fff;
+  cursor: pointer;
+
 }
 .background-image{
   background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2021/06/header-home-02.jpg);
@@ -96,38 +116,43 @@ body{
   min-height: 50vh;
 }
 
-.background-image h1{
-  text-align: center;
-  color: #fff;
-  margin-bottom:75px;
-
-}
 h1{
   font-family: 'Merriweather', sans-serif;
   font-size: 4.209em;
-  display: flex;
-  align-items: flex-end;
+  text-shadow: 0 0 10px rgba(0,0,0,.5);
+  margin: 0;
+  color: #fff;
+  margin-bottom: 75px;
 
 }
 .title{
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  min-height: 50vh;
+
 
 }
 .container{
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.row{
   display: flex;
   flex-wrap: wrap;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
 }
 .block-group{
   margin-bottom: 75px;
   margin-top: 25px;
+  width: 100%;
 }
 a{
   text-decoration: none;
@@ -136,10 +161,14 @@ a{
   background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2021/07/putting-green-03.jpg);
   min-height: 200px;
   background-position: 10% 54%;
-  width:100%;
+  width: 100vw;
+  height: 100%;
+  margin: 0 calc(50% - 50vw);
+  background-size: cover;
+  margin-top: 80px;
+  justify-content: center;
 }
-.orange-button{
-  background-color: #ff8b00;
+.button{
   padding: 15px 30px 15px 30px;
   border-radius: 9999px;
   color: #fff;
@@ -148,9 +177,33 @@ a{
   text-align: center;
   transition: opacity, .3s;
 }
-.orange-button:hover{
+.orange{
+  background-color: #ff8b00;
+}
+
+.orange:hover{
   background-color: #e07a00;
 }
+.white{
+  background-color: #fff;
+  color: #000;
+  margin-right: 30px;
+}
+.transparent{
+  background-color: none;
+  border: 2px solid;
+  border-color: #fff;
+}
+.no-center{
+  justify-content: start;
+}
+.info{
+  position: relative;
+  left: 36px;
+  top: 46px;
+  font-size: 40px;
+}
+
 .block-buttons{
   display: flex;
   justify-content: flex-end;
@@ -169,6 +222,17 @@ a{
   position: relative;
 
 }
+
+.baanstatus::before{
+  content: "";
+  width: 2px;
+  background-color: grey;
+  position: absolute;
+  top: -25px;
+  height: 25px;
+  left: 55px;
+}
+
 .state{
   padding: 30px;
   border: 1px solid #e6e6e6;;
@@ -195,8 +259,7 @@ h4{
 .block-column{
   flex-grow: 1;
   min-width: 0;
-  margin: 25px;
-
+  margin: 20px;
 }
 
 .column1{
@@ -206,19 +269,24 @@ h4{
   width: 100%;
   background-size: cover;
 }
+p{
+  font-family: 'Open Sans', sans-serif;
+}
 .text-content p{
   color: black;
-  font-family: 'Open Sans', sans-serif;
 
 }
+
 .text-content{
   background-color: white;
   margin: 0px 30px;
   padding: 15px;
   bottom: -30px;
   text-align: center;
-
+  position: relative;
+  top: 90px
 }
+
 .text-content a{
   display: block;
   color: white;
@@ -227,8 +295,12 @@ h4{
   margin: 15px -15px -15px -15px;
   font-size: 1.333em;
 }
+
 .green{
   background-color: #92ad00;
+}
+.padding-top{
+  padding-top: 80px;
 }
 .inner-ornament{
   content: "";
@@ -241,7 +313,7 @@ h4{
   margin-left: 0;
   border-left: 50vw solid #fff;
   border-right: 50vw solid #fff;
-  height: 70px;
+  border-top: 100px solid transparent;
 }
 .ornament{
   width: 100%;
@@ -251,8 +323,36 @@ h4{
   overflow: hidden;
 }
 
+.inner-container{
+    z-index: 1;
+  font-family: 'Merriweather', sans-serif;
+  color: white;
+  position: relative;
+  padding: 0 400px 0 125px;
+  max-width: 1140px;
+}
+.inner-container h2{
+  font-size: 3.157em;
+
+}
+.background-cover{
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg,#225c00 30%,rgba(34,92,0,0));
+  opacity: .6;
+}
+
 @media screen and (max-width: 992px) {
   .container {
     max-width: 720px;
+  }
+  .low-header{
+    font-size: 16px;
+  }
+  .menu ul li{
+    padding-left: 2rem;
+  }
+  .low-header img{
+    max-width: 200px;
   }
 }
