@@ -5,7 +5,15 @@ html{
   padding: 0;
 }
 
-.top-header ul{
+h3{
+  font-family: "Merriweather";
+  font-size: 2.369em;
+  font-weight: 700;
+  margin: 0;
+  margin-right: -50px;
+}
+
+.top-header-menu ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -13,12 +21,41 @@ html{
   padding: 0;
   margin: 0;
 }
-
-.top-header {
-  width:100;
-  padding: 1rem;
-  font-size: .75rem;
+.top-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #00a0c5;
+  padding-left: 20px;
+  color:white;
+  padding: 15px 45px;
+}
+.top-header h5{
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.inner-menu li:last-child {
+  background: #ff8b00!important;
+  color: white;
+  height: 100;
+}
+.inner-menu li:last-child:hover {
+  background: #e07a00 !important;
+  color: white;
+}
+
+
+.top-header-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.top-header a{
+  cursor: pointer;
 }
 
 .header{
@@ -48,6 +85,7 @@ html{
 .top-header ul li{
   font-weight: 700;
   color: #fff;
+  margin-left: 20px;
 
 }
 body{
@@ -64,7 +102,7 @@ body{
   font-size: 24px;
 }
 
-.menu a{
+.inner-menu a{
   line-height: 80px;
   height: 80px;
 
@@ -86,19 +124,24 @@ body{
   align-items: center;
   width: 100%;
 }
+.dark-green{
+  background-color: #225c00;
+}
 
-.menu ul{
+.light-blue{
+  background-color:#00a0c5;
+}
+.inner-menu{
   display: flex;
   list-style: none;
   justify-content: space-between;
-
+  margin: 0;
 }
-.menu ul li{
-  height: auto;
-  padding: 0px 30px 0px 30px;
+.inner-menu li{
   transition: opacity, .3s;
+  padding: 23px 30px 22px 30px;
 }
-.menu ul li:hover{
+.inner-menu li:hover{
   background: rgba(255, 255, 255, 0);
   color: #00a0c5;
   font-weight: normal;
@@ -122,18 +165,17 @@ h1{
   text-shadow: 0 0 10px rgba(0,0,0,.5);
   margin: 0;
   color: #fff;
-  margin-bottom: 75px;
-
+  margin-bottom: 75px;s
 }
+
 .title{
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
   min-height: 50vh;
-
-
 }
+
 .container{
   max-width: 1140px;
   width: 100%;
@@ -141,6 +183,7 @@ h1{
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 .row{
   display: flex;
@@ -158,6 +201,7 @@ a{
   text-decoration: none;
 }
 .background-image-full{
+  position:relative;
   background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2021/07/putting-green-03.jpg);
   min-height: 200px;
   background-position: 10% 54%;
@@ -176,6 +220,13 @@ a{
   font-size: 1.3333rem;
   text-align: center;
   transition: opacity, .3s;
+  border: 0;
+}
+.form-input{
+  padding: 5px;
+}
+.form-button{
+  margin-top: 15px;
 }
 .orange{
   background-color: #ff8b00;
@@ -184,6 +235,10 @@ a{
 .orange:hover{
   background-color: #e07a00;
 }
+.orange:active{
+  background-color: #b36100;
+}
+
 .white{
   background-color: #fff;
   color: #000;
@@ -195,7 +250,7 @@ a{
   border-color: #fff;
 }
 .no-center{
-  justify-content: start;
+  justify-content: start !important;
 }
 .info{
   position: relative;
@@ -248,6 +303,16 @@ h4{
   font-size: 1.77rem;
   margin: 0px;
 }
+.agenda-items li{
+  border-top: 1px solid #e6e6e6;
+    padding: 30px 0;
+}
+.agenda-items p{
+    font-family: "Open Sans",sans-serif;
+    display: inline-block;
+    padding: 0;
+    margin:0;
+}
 
 *{
   box-sizing: inherit;
@@ -255,6 +320,7 @@ h4{
 .block-columns{
   display: flex;
   flex-wrap: nowrap;
+  padding-top: 80px;
 }
 .block-column{
   flex-grow: 1;
@@ -330,21 +396,287 @@ p{
   position: relative;
   padding: 0 400px 0 125px;
   max-width: 1140px;
+  padding-left: 125px;
 }
 .inner-container h2{
   font-size: 3.157em;
 
 }
 .background-cover{
-  display: flex;
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  top:0;
   justify-content: center;
   background: linear-gradient(90deg,#225c00 30%,rgba(34,92,0,0));
   opacity: .6;
 }
+.button-small{
+  transition: background-color,.25s;
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 50px;
+    line-height: 1em;
+    font-family: Open Sans Condensed,Arial,Helvetica,sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding: 15px 37.5px 15px 22.5px;
+    margin-top: 30px;
+}
+.background-image-01::before{
+  content: "";
+  width: 2px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 55px;
+}
+.agenda-items{
+  flex-basis: 33.33%;
+}
+.agenda-image{
+  flex-basis: 66.66%;
+  position: relative;
+}
+.agenda-image figure{
+  width:calc(100% - 50px);
+}
+.agenda-image img{
+  width: 100%;
+}
+.image-content{
+  width: 50%;
+  position: absolute;
+  padding: 50px 0 50px 50px;
+  background-color: white;
+  right: 0px;
+  bottom: -50px;
+}
+
+.background-image-01{
+  background-image: url(https://www.golfclubzwolle.nl/wp-content/uploads/2020/09/Ben-01-web.jpg);
+  min-height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.background-image-content{
+  padding: 45px 45px 45px 100px;
+  width: 66%;
+}
+.background-image-content h3{
+  margin: 0;
+}
+
+.partner-image{
+  width: 200px;
+}
+.partners{
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+h2{
+  font-size: 3.157rem;
+}
+.pre-footer{
+    padding: 75px 0;
+    margin-top: 75px;
+    position: relative;
+}
+.width-max h2{
+  margin:0 ;
+}
+
+.inner-ornament-footer{
+  content: "";
+  width: 0;
+  height: 0;
+  position: relative;
+  z-index: 1;
+  bottom: 100%;
+  left: 0;
+  margin-left: 0;
+  border-left: 50vw solid #00a0c5;
+  border-right: 50vw solid #00a0c5;
+  border-top: 100px solid transparent;
+}
+.ornament-footer{
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.width-max{
+  min-width: 0;
+  width: 100%;
+  padding-top:50px;
+}
+.dropdown-menu-golfen{
+  width: 100%;
+  left: -000px;
+  top: 140px;
+  padding-right: 186px;
+  position: absolute;
+  z-index: 999;
+  background-color: #f1f1f1;
+  display:flex;
+  padding-left: 200px;
+}
+.dropdown-menu-golfen li{
+  padding-right: 200px !important;
+  color:#555;
+  font-size: 16px;
+}
+.dropdown-menu-golfen li ul li{
+  padding: 0;
+  font-family: "Open-sans";
+  color: #666;
+}
+.golfen-menu .dropdown-menu-golfen{
+  display: none;
+}
+
+.golfen-menu:hover .dropdown-menu-golfen{
+  display:flex;
+}
+.branding a{
+  position: relative;
+}
+.branding a::after{
+  height: 100px;
+/* width: 10px; */
+  content: "";
+  left: 70px;
+  top: 83px;
+  position: absolute;
+  border-color: #00a0c5 transparent transparent;
+  border-style: solid;
+  border-width: 20px 100px 0;
+  z-index: 999;
+}
+.i{
+  position: relative;
+  transition: color,.25s;
+}
+.search-bar:hover input{
+  width: 400px;
+}
+
+.search-bar input{
+    position: absolute;
+    right: 35px;
+    height: 100%;
+    width: 0;
+    background: #00c9f8;
+    font-family: Open Sans,Arial,Helvetica,sans-serif;
+    color: #fff;
+    border: 0;
+    padding: 0px
+    transition: all .25s;
+}
+.search-bar input[type=text]:focus {
+  border: 0;
+}
+.tekening{
+  border-top: 7.5px solid #fff;
+  border-bottom: 7.5px solid #fff;
+  border
+}
+.button::after{
+    content: "";
+    border-left-style: solid;
+    border-left-width: 7.5px;
+    border-bottom: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    border-top: 7.5px solid transparent;
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+    position: absolute;
+}
+.text-field{
+  padding: 15px;
+  width: 100%;
+    outline: unset;
+    border: 1px solid #373532;
+    transition: border-color .25s;
+}
+.een{
+  top: 0px;
+  content: "";
+  border-left-style: solid;
+  border-left-width: 15px;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid transparent;
+  position: absolute;
+}
+.twee{
+  top: 40px;
+  content: "";
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid;
+  border-right: 15px solid transparent;
+  border-top: 15px solid transparent;
+  position: absolute;
+}
+.drie{
+  top: 40px;
+  content: "";
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid;
+  position: absolute;
+}
+.vier{
+  top: 0px;
+  content: "";
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid;
+  border-top: 15px solid transparent;
+  position: absolute;
+}
+
+.main-form{
+  margin: 0 auto;
+  max-width:40vw;
+}
+.width-max{
+  max-width: unset;
+}
+.title_form{
+  text-align: center;
+  color: #fff
+}
+label{
+  font-size: .75rem;
+    color: #373532;
+    font-family: "Open-Sans"
+}
+
+.submit-button{
+  display:block;
+}
 
 @media screen and (max-width: 992px) {
   .container {
-    max-width: 720px;
+
   }
   .low-header{
     font-size: 16px;
@@ -355,4 +687,27 @@ p{
   .low-header img{
     max-width: 200px;
   }
+}
+@media screen and (max-width: 767.98px){
+  h1{
+    margin-bottom: 120px;
+    font-size: 2.369em;
+    text-align: center;
+  }
+  .header{
+    display: none;
+  }
+  .block-columns{
+    flex-wrap: wrap;
+  }
+  .ornament-footer, .pre-footer{
+    display: none;
+  }
+  .inner-container{
+    padding: 0;
+  }
+  .partners h3{
+    width:100%;
+  }
+
 }
